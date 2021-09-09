@@ -1,16 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Layout from './components/layout';
+import Footer from './components/footer';
+import bg1 from './assets/bg3.jpg';
+import bg2 from './assets/bg1.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, Zar ;)
-        </p>
-      </header>
-    </div>
+    <>
+      <Header
+        title='This is title'
+        descr='This is Description!' />
+      <Layout urlBg={bg1} />
+      <Layout colorBg='red' />
+      <Layout urlBg={bg2} />
+      <Footer />
+    </>
   );
 }
 
