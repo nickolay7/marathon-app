@@ -1,21 +1,21 @@
-import './index.css';
+import l from './index.module.css';
 
-const Layout = ({ title, descr, urlBg, colorBg }) => {
+const Layout = ({ title, urlBg, colorBg, children }) => {
   return (
     <section
-      className="root"
+      className={l.root}
       style={{
         backgroundImage: `url(${urlBg})`,
         backgroundColor: `${colorBg}`
       }} >
-      <div className="wrapper">
+      <div className={l.wrapper}>
         <article>
-          <div className="title">
+          <div className={l.title}>
             <h3>{title}</h3>
-            <span className="separator"></span>
+            <span className={l.separator}></span>
           </div>
-          <div className="desc full">
-            <p>{descr}</p>
+          <div className={`${l.desc} ${l.full}`}>
+            {children}
           </div>
         </article>
       </div>
